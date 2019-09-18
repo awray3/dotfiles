@@ -4,7 +4,46 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 #export PATH="/usr/local/anaconda3/lib/python3.7/site-packages:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/awray_mac/.oh-my-zsh"
+case "$OSTYPE" in
+	darwin*)
+		export ZSH="/Users/awray_mac/.oh-my-zsh"
+		export thesis=~/Documents/thesis.nosync/
+		export bio=~/Dropbox/My_Documents/Bio_610/
+		export teach=~/Dropbox/Teaching/Math_256/Spring_19/
+		export web=~/Dropbox/Webpage_Stuff/Classes/Math_256/Spring_2019/
+		export pdf=~/Documents/PDFs
+		export agp=~/Documents/PDFs/Algebraic_Geometry/
+		export upload=~/Dropbox/Teaching/
+		export currentterm_teach='Spring_19'
+		export currentterm_web='Spring_2019'
+		export currentclass='Math_256'
+		export journal=~/Dropbox/research_notes/journal/
+		export PATH=~/anaconda3/bin:$PATH
+		export PATH="$HOME/anaconda/bin:$PATH"
+		export FZF_BASE=/usr/local/opt/fzf/
+
+		alias cphw="find $teach/Homework -name \*.pdf -exec cp {} $web/Files/Homework \;"
+		alias upload="scp -r ~/Dropbox/Webpage_Stuff/Classes/"$currentclass"/"$currentterm_web"/ awray3@shell.uoregon.edu:public_html/Classes/"$currentclass"/"$cirrentterm_web"/"
+		# >>> conda initialize >>>
+		# !! Contents within this block are managed by 'conda init' !!
+		__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+		if [ $? -eq 0 ]; then
+		eval "$__conda_setup"
+		else
+		if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
+			. "/usr/local/anaconda3/etc/profile.d/conda.sh"
+		else
+			export PATH="/usr/local/anaconda3/bin:$PATH"
+		fi
+		fi
+		unset __conda_setup
+		# <<< conda initialize <<<
+
+	;;
+	linux*)
+		export ZSH="/home/awray/.oh-my-zsh"
+	;;
+esac
 # export PATH="/usr/bin/anaconda3/bin:$PATH"  # commented out by conda initialize
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -15,7 +54,7 @@ export ZSH="/Users/awray_mac/.oh-my-zsh"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(CONDA_PROMPT_MODIFIER)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(git)
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -74,8 +113,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-plugins=(virtualenv)
+plugins=(git virtualenv)
 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
 
@@ -105,22 +143,6 @@ source $ZSH/oh-my-zsh.sh
 #
 #
 # Example aliases
-export thesis=~/Documents/thesis.nosync/
-export bio=~/Dropbox/My_Documents/Bio_610/
-export teach=~/Dropbox/Teaching/Math_256/Spring_19/
-export web=~/Dropbox/Webpage_Stuff/Classes/Math_256/Spring_2019/
-export pdf=~/Documents/PDFs
-export agp=~/Documents/PDFs/Algebraic_Geometry/
-export upload=~/Dropbox/Teaching/
-export currentterm_teach='Spring_19'
-export currentterm_web='Spring_2019'
-export currentclass='Math_256'
-export journal=~/Dropbox/research_notes/journal/
-export PATH=~/anaconda3/bin:$PATH
-export PATH="$HOME/anaconda/bin:$PATH"
-
-alias cphw="find $teach/Homework -name \*.pdf -exec cp {} $web/Files/Homework \;"
-alias upload="scp -r ~/Dropbox/Webpage_Stuff/Classes/"$currentclass"/"$currentterm_web"/ awray3@shell.uoregon.edu:public_html/Classes/"$currentclass"/"$cirrentterm_web"/"
 alias jl="jupyter lab"
 alias ls="ls -a"
 
@@ -139,22 +161,7 @@ zstyle ':completion:*:*:nvim:*' file-patterns '^*.(out|latexmain|aux|log|pdf|gz|
 
 bindkey -v
 
-export FZF_BASE=/usr/local/opt/fzf/
 
 #eval "$(pyenv init -)"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/local/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
