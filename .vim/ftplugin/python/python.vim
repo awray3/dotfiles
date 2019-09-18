@@ -87,6 +87,10 @@ nmap ,D :tab split<CR>:call jedi#goto()<CR>
 " deoplete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
+
+"""""""""""" Neoformat
+nnoremap <leader>f :Neoformat yapf<CR>
+
 " Enable alignment
 let g:neoformat_basic_format_align = 1
 

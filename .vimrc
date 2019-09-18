@@ -17,6 +17,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Townk/vim-autoclose'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-fugitive'
 
 "Python
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -152,5 +153,5 @@ else
 	let g:python3_host_prog = '/home/awray/anaconda3/envs/neovim3/bin/python3'
 endif
 
-"set runtimepath=~/.vim/colors,~/.vim/ftplugin,$VIMRUNTIME
-source ~/.vim/colors/solarized.vim
+" terminal mode
+tnoremap <Esc> <C-\><C-n>
