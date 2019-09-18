@@ -44,7 +44,7 @@ Plug 'SirVer/UltiSnips' | Plug 'honza/vim-snippets'
 "Plug 'ervandew/supertab'
 call plug#end()
 
-"filetype plugin indent on
+filetype plugin indent on
 let g:tex_flavor='latex'
 
 let $COLORS="~/.vim/plugin/colorstuff.vim"
@@ -149,3 +149,6 @@ if has('mac')
 else 
 	let g:python3_host_prog = '/home/awray/anaconda3/envs/neovim3/bin/python3'
 endif
+
+"set runtimepath=~/.vim/colors,~/.vim/ftplugin,$VIMRUNTIME
+source ~/.vim/colors/solarized.vim

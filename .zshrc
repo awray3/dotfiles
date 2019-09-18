@@ -165,8 +165,8 @@ alias ls="ls -a"
 
 alias zshconfig="nvim ~/.zshrc"
 alias vimconfig="nvim ~/.vimrc"
-alias oldvim="vim"
-alias vim="nvim"
+#alias oldvim="vim"
+#alias vim="nvim"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 #source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
