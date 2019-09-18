@@ -144,4 +144,8 @@ let g:airline_solarized_bg='dark'
 "multi cursor
 let g:multi_cursor_exit_from_insert_mode = 0
 
-let g:python3_host_prog = '/usr/local/anaconda3/envs/neovim3/bin/python'
+if has('mac')
+	let g:python3_host_prog = '/usr/local/anaconda3/envs/neovim3/bin/python'
+else 
+	let g:python3_host_prog = '/home/awray/anaconda3/envs/neovim3/bin/python3'
+endif
