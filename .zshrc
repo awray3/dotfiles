@@ -31,9 +31,9 @@ case "$OSTYPE" in
 		eval "$__conda_setup"
 		else
 		if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
-			. "/usr/local/anaconda3/etc/profile.d/conda.sh"
+# . "/usr/local/anaconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
 		else
-			export PATH="/usr/local/anaconda3/bin:$PATH"
+# export PATH="/usr/local/anaconda3/bin:$PATH"  # commented out by conda initialize
 		fi
 		fi
 		unset __conda_setup
@@ -43,17 +43,18 @@ case "$OSTYPE" in
 	linux*)
 		export ZSH="/home/awray/.oh-my-zsh"
 
-		export PATH="/home/awray/anaconda3/bin/:$PATH"
+		#export PATH="/home/awray/anaconda3/bin/:$PATH"
+
 		# >>> conda initialize >>>
 		# !! Contents within this block are managed by 'conda init' !!
-		__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+		__conda_setup="$('/home/awray/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 		if [ $? -eq 0 ]; then
 		eval "$__conda_setup"
 		else
-		if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
-			. "/usr/local/anaconda3/etc/profile.d/conda.sh"
+		if [ -f "/home/awray/anaconda3/etc/profile.d/conda.sh" ]; then
+			. "/home/awray/anaconda3/etc/profile.d/conda.sh"
 		else
-			export PATH="/usr/local/anaconda3/bin:$PATH"
+			export PATH="/home/awray/anaconda3/bin:$PATH"
 		fi
 		fi
 		unset __conda_setup
@@ -166,7 +167,7 @@ alias ls="ls -a"
 alias zshconfig="nvim ~/.zshrc"
 alias vimconfig="nvim ~/.vimrc"
 #alias oldvim="vim"
-#alias vim="nvim"
+alias vim="nvim"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 #source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
@@ -177,8 +178,5 @@ zstyle ':completion:*:*:mvim:*' file-patterns '^*.(out|latexmain|aux|log|pdf|gz|
 zstyle ':completion:*:*:nvim:*' file-patterns '^*.(out|latexmain|aux|log|pdf|gz|fls|fdb_latexmk):source-files' '*:all-files'
 
 bindkey -v
-
-
-#eval "$(pyenv init -)"
 
 
