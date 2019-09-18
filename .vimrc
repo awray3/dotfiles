@@ -25,6 +25,8 @@ Plug 'sbdchd/neoformat'
 Plug 'davidhalter/jedi-vim'
 Plug 'neomake/neomake'
 Plug 'bfredl/nvim-ipy'
+Plug 'Vigemus/iron.nvim'
+
 "Plug 'w0rp/ale'
 "Plug 'ycm-core/YouCompleteMe'
 "Plug 'majutsushi/tagbar'
