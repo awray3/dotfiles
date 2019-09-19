@@ -11,7 +11,7 @@ else
 	let g:vimtex_view_method='zathura'
 endif
 
-let g:vimtex_quickfix_mode=1
+"let g:vimtex_quickfix_mode=1
 set conceallevel=0
 "set conceallevel=1
 "let g:tex_conceal="abdmgs"
