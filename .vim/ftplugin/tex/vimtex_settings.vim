@@ -4,7 +4,13 @@ filetype indent on
 let g:vimtex_imaps_leader=','
 let g:tex_fold_manual=1
 "let g:vimtex_fold_enabled=1
-let g:vimtex_view_method='skim'
+
+if has('mac')
+	let g:vimtex_view_method='skim'
+else 
+	let g:vimtex_view_method='zathura'
+endif
+
 let g:vimtex_quickfix_mode=1
 set conceallevel=0
 "set conceallevel=1
