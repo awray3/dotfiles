@@ -67,8 +67,10 @@ set termguicolors
 nnoremap <space> za 
 
 
-" 
+" general options
 
+set wrap
+set colorcolumn=80
 set shiftround " seems to round your indents
 set foldmethod=indent
 set foldlevel=99
