@@ -72,7 +72,8 @@ esac
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(git)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(git)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status anaconda)
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -131,10 +132,9 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+
 plugins=(git virtualenv)
-
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
