@@ -69,7 +69,7 @@ nnoremap <space> za
 
 " general options
 
-set wrap
+set textwidth=80
 set colorcolumn=80
 set shiftround " seems to round your indents
 set foldmethod=indent
