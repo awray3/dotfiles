@@ -177,3 +177,5 @@ let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 let g:UltiSnipsSnippetsDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
+" Nerdtree settings
+autocmd vimenter * NERDTree
