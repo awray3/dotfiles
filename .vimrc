@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'jremmen/vim-ripgrep'
 Plug 'https://github.com/stefandtw/quickfix-reflector.vim.git'
-Plug 'lifepillar/vim-solarized8'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin' 
@@ -19,6 +18,10 @@ Plug 'Townk/vim-autoclose'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-fugitive'
+
+" Colorschemes
+Plug 'lifepillar/vim-solarized8'
+Plug 'morhetz/gruvbox'
 
 "Python
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -178,4 +181,10 @@ let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 let g:UltiSnipsSnippetsDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
 " Nerdtree settings
+" Open automatically
 autocmd vimenter * NERDTree
+
+" close if last window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
