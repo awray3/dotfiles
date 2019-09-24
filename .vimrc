@@ -141,7 +141,7 @@ vmap <C-_> <leader>c<Space>
 let g:deoplete#enable_at_startup = 1
 
 "Airline
-let g:airline_theme='solarized'
+let g:airline_theme='gruvbox'
 let g:airline_solarized_bg='dark'
 
 let g:airline_symbols={}
