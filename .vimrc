@@ -8,9 +8,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'jremmen/vim-ripgrep'
 Plug 'https://github.com/stefandtw/quickfix-reflector.vim.git'
-Plug 'lifepillar/vim-solarized8'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
+	Plug 'Xuyuanp/nerdtree-git-plugin' 
 Plug 'aserebryakov/vim-todo-lists'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -18,6 +18,10 @@ Plug 'Townk/vim-autoclose'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-fugitive'
+
+" Colorschemes
+Plug 'lifepillar/vim-solarized8'
+Plug 'morhetz/gruvbox'
 
 "Python
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -137,7 +141,7 @@ vmap <C-_> <leader>c<Space>
 let g:deoplete#enable_at_startup = 1
 
 "Airline
-let g:airline_theme='solarized'
+let g:airline_theme='gruvbox'
 let g:airline_solarized_bg='dark'
 
 let g:airline_symbols={}
@@ -175,4 +179,12 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 let g:UltiSnipsSnippetsDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+
+" Nerdtree settings
+" Open automatically
+autocmd vimenter * NERDTree
+
+" close if last window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 
