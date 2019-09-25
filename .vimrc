@@ -91,7 +91,6 @@ set cursorline
 
 " Remap and jk kj to esc
 inoremap jk <esc>
-inoremap kj <esc>
 
 set guifont=Menlo-Regular:h13
 
