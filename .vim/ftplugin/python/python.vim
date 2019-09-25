@@ -91,6 +91,7 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 """""""""""" Neoformat
 nnoremap <leader>f :Neoformat yapf<CR>
+let g:neoformat_enabled_python = ['autopep8']
 
 " Enable alignment
 let g:neoformat_basic_format_align = 1
@@ -110,9 +111,5 @@ let g:neomake_python_enabled_makers = ['pylint']
 call neomake#configure#automake('nrwi', 500)
 
 
-
-
-
-
-
-
+" IronRepl
+nnoremap <leader>i :IronRepl<CR><Esc><C-W>hi
