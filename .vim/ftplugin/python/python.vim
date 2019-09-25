@@ -56,6 +56,7 @@ let g:jedi#goto_assignments_command = ',a'
 " Go to definition in new tab
 nmap ,D :tab split<CR>:call jedi#goto()<CR>
 
+let g:jedi#completions_enabled = 0
 
 " most of them not documented because I'm not sure how they work
 " (docs aren't good, had to do a lot of trial and error to make
@@ -100,8 +101,6 @@ let g:neoformat_basic_format_retab = 1
 " Enable trimmming of trailing whitespace
 let g:neoformat_basic_format_trim = 1
 
-"jedi stuff
-let g:jedi#completions_enabled = 0
 
 " open the go-to function in split, not another buffer
 "let g:jedi#use_splits_not_buffers = "right"
