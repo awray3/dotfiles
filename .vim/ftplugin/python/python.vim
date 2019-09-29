@@ -90,7 +90,7 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 
 """""""""""" Neoformat
-nnoremap <leader>f :Neoformat yapf<CR>
+nnoremap <leader>f :Neoformat 
 let g:neoformat_enabled_python = ['autopep8']
 
 " Enable alignment
