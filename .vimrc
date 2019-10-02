@@ -184,7 +184,3 @@ autocmd vimenter * NERDTree
 
 " close if last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-
-set ai
-set smartindent
