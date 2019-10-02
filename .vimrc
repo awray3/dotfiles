@@ -135,6 +135,11 @@ let g:VimTodoListsMoveItems = 0
 nmap <C-_> <leader>c<Space>
 vmap <C-_> <leader>c<Space>
 
+" Nerdtree settings
+" Open automatically
+autocmd vimenter * NERDTree | wincmd p
+
+
 "deoplete
 let g:deoplete#enable_at_startup = 1
 
@@ -177,10 +182,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 let g:UltiSnipsSnippetsDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
-
-" Nerdtree settings
-" Open automatically
-autocmd vimenter * NERDTree
 
 " close if last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
