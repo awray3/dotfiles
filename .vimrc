@@ -9,12 +9,11 @@ Plug 'tpope/vim-surround'
 Plug 'jremmen/vim-ripgrep'
 Plug 'https://github.com/stefandtw/quickfix-reflector.vim.git'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
-	Plug 'Xuyuanp/nerdtree-git-plugin' 
+Plug 'scrooloose/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin' 
 Plug 'aserebryakov/vim-todo-lists'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Townk/vim-autoclose'
+Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-fugitive'
@@ -22,6 +21,7 @@ Plug 'tpope/vim-fugitive'
 " Colorschemes
 Plug 'lifepillar/vim-solarized8'
 Plug 'morhetz/gruvbox'
+Plug 'ayu-theme/ayu-vim'
 
 "Python
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -65,7 +65,6 @@ let g:rg_highlight='true'
 
 set omnifunc=syntaxcomplete#Complete
 syntax on
-set termguicolors
 
 " remaps za to space for easier folding
 nnoremap <space> za 
@@ -187,3 +186,5 @@ autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
+set ai
+set smartindent
