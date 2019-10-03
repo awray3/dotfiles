@@ -9,7 +9,7 @@ Plug 'tpope/vim-surround'
 Plug 'jremmen/vim-ripgrep'
 Plug 'https://github.com/stefandtw/quickfix-reflector.vim.git'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin' 
+"Plug 'scrooloose/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin' 
 Plug 'aserebryakov/vim-todo-lists'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -22,6 +22,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'lifepillar/vim-solarized8'
 Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim'
+
+" Markdown
+Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 
 "Python
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -137,7 +140,7 @@ vmap <C-_> <leader>c<Space>
 
 " Nerdtree settings
 " Open automatically
-autocmd vimenter * NERDTree | wincmd p
+"autocmd vimenter * NERDTree | wincmd p
 
 
 "deoplete
@@ -173,7 +176,11 @@ endif
 tnoremap <Esc> <C-\><C-n>
 
 
-
+" window keys
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " Stuff for Ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -184,4 +191,4 @@ let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 let g:UltiSnipsSnippetsDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
 " close if last window open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
