@@ -5,6 +5,8 @@ set tabstop=4
 
 let g:rg_command='rg --vimgrep -S --type tex'
 
+let g:AutoPairs={'(':')', '[':']', '{':'}', '``':'"', '$':'$'}
+
 "let g:ale_enabled=0
 "let g:jedi#auto_initialization=0
 "let g:indentLine_enabled=0
