@@ -16,7 +16,7 @@ set conceallevel=0
 "set conceallevel=1
 "let g:tex_conceal="abdmgs"
 let g:vimtex_complete_enabled=1
-let g:vimtex_complete_bib={'simple':1}
+"let g:vimtex_complete_bib={'simple':1}
 set spelllang=en_gb spell
 
 let g:vimtex_compiler_progname = 'nvr'
