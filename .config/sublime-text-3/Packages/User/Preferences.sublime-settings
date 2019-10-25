@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Medium) NDC.sublime-color-scheme",
+	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
 	"command": "exit_insert_mode",
 	"context":
 	[
@@ -16,9 +16,8 @@
 	"ignored_packages":
 	[
 	],
-	"keys":
+	"rulers":
 	[
-		"j",
-		"k"
+		80
 	]
 }
