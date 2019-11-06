@@ -43,14 +43,14 @@ let g:vimtex_imaps_disabled=['j','k','0','1','2']
 
 
 let g:vimtex_quickfix_latexlog = {
-          \ 'overfull' : 0,
-          \ 'underfull' : 0,
-          \ 'packages' : {
-          \   'default' : 0,
-          \ },
-          \}
+	  \ 'overfull' : 0,
+	  \ 'underfull' : 0,
+	  \ 'packages' : {
+	  \   'default' : 0,
+	  \ },
+	  \}
 
 
-call deoplete#custom#var('omni', 'input_patterns', {
-          \ 'tex': g:vimtex#re#deoplete
-          \})
+"call deoplete#custom#var('omni', 'input_patterns', {
+          "\ 'tex': g:vimtex#re#deoplete
+          "\})

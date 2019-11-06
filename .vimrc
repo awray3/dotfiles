@@ -24,16 +24,16 @@ Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim'
 
 " Markdown
-Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
+"Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 
 "Python
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'sbdchd/neoformat'
-Plug 'davidhalter/jedi-vim'
-Plug 'neomake/neomake'
-Plug 'bfredl/nvim-ipy'
-Plug 'Vigemus/iron.nvim'
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'zchee/deoplete-jedi'
+"Plug 'sbdchd/neoformat'
+"Plug 'davidhalter/jedi-vim'
+"Plug 'neomake/neomake'
+"Plug 'bfredl/nvim-ipy'
+"Plug 'Vigemus/iron.nvim'
 
 "Plug 'w0rp/ale'
 "Plug 'ycm-core/YouCompleteMe'
@@ -50,8 +50,6 @@ Plug 'Vigemus/iron.nvim'
 Plug 'lervag/vimtex'
 Plug 'SirVer/UltiSnips' | Plug 'honza/vim-snippets'
 
-"Plug 'Yggdroot/indentLine'
-"Plug 'ervandew/supertab'
 call plug#end()
 
 filetype plugin indent on
@@ -164,9 +162,9 @@ let g:airline_symbols.maxlinenr = ''
 
 
 "multi cursor
-let g:multi_cursor_exit_from_insert_mode = 0
+let g:multi_cursor_exit_from_insert_mode = 1
 
-if has('mac')
+if has('nvim')
 	let g:python3_host_prog = '/usr/local/anaconda3/envs/neovim3/bin/python'
 else 
 	let g:python3_host_prog = '/home/awray/anaconda3/envs/neovim3/bin/python3'
