@@ -14,7 +14,7 @@ call plug#end()
 filetype plugin indent on
 syntax on
 
-"colors
+"colours
 set termguicolors
 let ayucolor="mirage" " for mirage version of theme
 colorscheme ayu
@@ -24,14 +24,16 @@ set textwidth=80
 set colorcolumn=80
 set shiftround " seems to round your indents
 set foldmethod=indent
-set foldlevel=99
+set foldlevel=1
 set linebreak " Adds in a better word wrap
 set ruler 
 set number
 set backspace=indent,eol,start "allow backspacing over everything in insert mode
 set incsearch "Turn on Highlight next search
-set cursorline
 
+if has('mac')
+	set cursorline
+endif
 
 " Nerdcommenter setting
 nmap <C-_> <leader>c<Space>
@@ -63,3 +65,10 @@ set swapfile
 set dir=~/.vim/.swp//
 set backupdir=~/.vim/.backup//
 set undodir=~/.vim/.undo//
+
+
+" Window Keys
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
