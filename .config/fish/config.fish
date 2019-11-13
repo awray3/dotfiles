@@ -3,6 +3,12 @@
 eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
+switch (uname)
+case Linux
+	echo I am on Linux
+case Darwin
+	echo I am on Mac
+end
 
 alias vimconfig "vim ~/.vimrc"
 alias nvimconfig "vim ~/.config/nvim/init.vim"
