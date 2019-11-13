@@ -60,4 +60,6 @@ let g:UltiSnipsSnippetsDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
 " swap and temp files
 set swapfile
-set dir=~/.vim/.swp/
+set dir=~/.vim/.swp//
+set backupdir=~/.vim/.backup//
+set undodir=~/.vim/.undo//
