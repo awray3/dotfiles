@@ -1,6 +1,3 @@
-set nocompatible
-filetype off
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'ayu-theme/ayu-vim'
@@ -17,6 +14,7 @@ call plug#end()
 filetype plugin indent on
 syntax on
 
+"colors
 set termguicolors
 let ayucolor="mirage" " for mirage version of theme
 colorscheme ayu
@@ -28,7 +26,7 @@ set shiftround " seems to round your indents
 set foldmethod=indent
 set foldlevel=99
 set linebreak " Adds in a better word wrap
-set ruler " Adds a ruler?
+set ruler 
 set number
 set backspace=indent,eol,start "allow backspacing over everything in insert mode
 set incsearch "Turn on Highlight next search
@@ -49,3 +47,14 @@ inoremap jk <esc>
 " Allow project specific vimrc
 set exrc
 set secure
+
+"
+"
+"" Ultisnips settings
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsEditSplit='vertical'
+let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
+let g:UltiSnipsSnippetsDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
