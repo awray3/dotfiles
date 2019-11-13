@@ -56,3 +56,8 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 let g:UltiSnipsSnippetsDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+
+
+" swap and temp files
+set swapfile
+set dir=~/.vim/.swp/
