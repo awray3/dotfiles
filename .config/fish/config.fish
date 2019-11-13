@@ -7,10 +7,8 @@ alias lsa "ls -a"
 alias gau "git add -u"
 
 # YADM aliases 
-alias yau "yadm add- u"
+alias yau "yadm add -u"
 alias yc "yadm commit -v"
-alias yyp "yadm push"
-alias yyl "yadm pull"
 alias yst "yadm status"
 
 # Conda settings for fish
