@@ -48,8 +48,6 @@ inoremap jk <esc>
 set exrc
 set secure
 
-"
-"
 "" Ultisnips settings
 
 let g:UltiSnipsExpandTrigger="<tab>"
