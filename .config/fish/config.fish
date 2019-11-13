@@ -1,10 +1,19 @@
 alias vimconfig "vim ~/.vimrc"
-alias nvimconfig "vim ~/.config/nvim/init.vim"
 alias fishconfig "vim ~/.config/fish/config.fish"
-alias thesis "cd ~/Documents/thesis.nosync"
-alias biostats "cd ~/Documents/data_sci.nosync/biostats"
 alias lsa "ls -a"
 alias gau "git add -u"
+
+# system-specific aliases. Remember Darwin = old name for MacOS
+
+switch (uname)
+
+case Darwin
+	alias thesis "cd ~/Documents/thesis.nosync"
+	alias biostats "cd ~/Documents/data_sci.nosync/biostats"
+case Linux
+	alias thesis "cd ~/Documents/thesis"
+	alias biostats "cd ~/Documents/biostats"
+end
 
 # YADM aliases 
 alias yau "yadm add -u"
