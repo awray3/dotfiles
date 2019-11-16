@@ -13,6 +13,7 @@ case Darwin
 case Linux
 	alias thesis "cd ~/Documents/thesis"
 	alias biostats "cd ~/Documents/biostats"
+	alias i3config "vim ~/.config/i3/config"
 end
 
 # YADM aliases 

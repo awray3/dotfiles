@@ -68,7 +68,16 @@ set undodir=~/.vim/.undo//
 
 
 " Window Keys
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+map <C-j> <C-w>h
+map <C-k> <C-w>j
+map <C-l> <C-w>k
+map <C-;> <C-w>l
+
+" remap directions one over
+noremap ; l
+noremap l k
+noremap k j
+noremap j h
+noremap ' ;
+
+
