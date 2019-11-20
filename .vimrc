@@ -65,19 +65,3 @@ set swapfile
 set dir=~/.vim/.swp//
 set backupdir=~/.vim/.backup//
 set undodir=~/.vim/.undo//
-
-
-" Window Keys
-map <C-j> <C-w>h
-map <C-k> <C-w>j
-map <C-l> <C-w>k
-map <C-;> <C-w>l
-
-" remap directions one over
-noremap ; l
-noremap l k
-noremap k j
-noremap j h
-noremap ' ;
-
-
