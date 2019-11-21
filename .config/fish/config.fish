@@ -1,3 +1,6 @@
+# this might need to be changed on ubuntu.
+set -gx PATH $HOME/.gem/ruby/2.6.0/bin $PATH
+
 alias vimconfig "vim ~/.vimrc"
 alias fishconfig "vim ~/.config/fish/config.fish"
 alias lsa "ls -a"
