@@ -5,6 +5,7 @@ alias vimconfig "vim ~/.vimrc"
 alias fishconfig "vim ~/.config/fish/config.fish"
 alias lsa "ls -a"
 alias gau "git add -u"
+#alias tmux=""
 
 # system-specific aliases. Remember Darwin = old name for MacOS
 
@@ -35,3 +36,5 @@ case Darwin
 end
 
 
+# Export for tmux
+#export TERM="screen-256color"
