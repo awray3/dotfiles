@@ -1,5 +1,9 @@
 # this might need to be changed on ubuntu.
-set -gx PATH $HOME/.gem/ruby/2.6.0/bin $PATH
+# set -gx PATH $HOME/.gem/ruby/2.6.0/bin $PATH
+ set -gx PATH /home/andrew/.cargo/bin $PATH
+ set -gx PATH /home/andrew/Downloads/spotifyd/target/release $PATH
+
+
 
 alias vimconfig "vim ~/.vimrc"
 alias fishconfig "vim ~/.config/fish/config.fish"
@@ -26,15 +30,5 @@ alias yc "yadm commit -v"
 alias yst "yadm status"
 
 # Conda settings for fish
+eval /home/andrew/miniconda/bin/conda "shell.fish" "hook" $argv | source
 
-switch (uname)
-
-case Linux
-	eval /home/awray/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-case Darwin 
-	eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-end
-
-
-# Export for tmux
-#export TERM="screen-256color"
