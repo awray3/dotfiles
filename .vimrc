@@ -11,6 +11,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'ayu-theme/ayu-vim'
+Plug 'Rigellute/rigel'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
@@ -22,20 +23,13 @@ Plug 'SirVer/UltiSnips' | Plug 'honza/vim-snippets'
 call plug#end()
 
 filetype plugin indent on
-syntax on
 
-"colours
-if exists("$TMUX")
-	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-	set t_Co=256
-	set notermguicolors
-else
-	set termguicolors
-endif
+set termguicolors
+syntax enable
+colorscheme rigel
 
-let ayucolor="mirage" " for mirage version of theme
-colorscheme ayu
+"let ayucolor="mirage" " for mirage version of theme
+"colorscheme ayu
 
 
 set textwidth=80
@@ -50,9 +44,7 @@ set relativenumber
 set backspace=indent,eol,start "allow backspacing over everything in insert mode
 set incsearch "Turn on Highlight next search
 
-if has('mac')
-	set cursorline
-endif
+set cursorline
 
 " Nerdcommenter setting
 nmap <C-_> <leader>c<Space>
@@ -84,3 +76,10 @@ set swapfile
 set dir=~/.vim/.swp//
 set backupdir=~/.vim/.backup//
 set undodir=~/.vim/.undo//
+
+
+" synthesize yank and paste with system keyboard
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
