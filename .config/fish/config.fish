@@ -10,6 +10,7 @@ alias fishconfig "vim ~/.config/fish/config.fish"
 alias spotconfig "vim ~/.config/spotifyd/spotifyd.conf"
 alias visconfig "vim ~/.config/vis/config"
 alias i3statusconfig "vim ~/.config/i3status/config"
+alias texconfig "vim ~/.vim/ftplugin/tex.vim"
 
 alias lsa "ls -a"
 alias gau "git add -u"
