@@ -5,6 +5,9 @@
 
 
 
+# server alias for vim
+alias vim "vim --servername vim"
+
 alias vimconfig "vim ~/.vimrc"
 alias fishconfig "vim ~/.config/fish/config.fish"
 alias spotconfig "vim ~/.config/spotifyd/spotifyd.conf"
@@ -12,7 +15,7 @@ alias visconfig "vim ~/.config/vis/config"
 alias i3statusconfig "vim ~/.config/i3status/config"
 alias texconfig "vim ~/.vim/ftplugin/tex.vim"
 
-alias lsa "ls -a"
+alias la 'ls -la | grep "^d"; and ls -la | grep "^-"; and ls -la | grep "^l"'
 alias gau "git add -u"
 #alias tmux=""
 
