@@ -36,7 +36,7 @@ set textwidth=80
 set colorcolumn=80
 set shiftround " seems to round your indents
 set foldmethod=indent
-set foldlevel=1
+set foldlevel=99
 set linebreak " Adds in a better word wrap
 set ruler 
 "set number

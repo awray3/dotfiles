@@ -6,7 +6,7 @@ set conceallevel=0
 set spelllang=en_gb spell
 
 let g:vimtex_fold_manual = 1
-let g:vimtex_imaps_disabled=['j','k','0','1','2', '\']
+let g:vimtex_imaps_disabled=['j', 'k', '0', '1', '2', '\']
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_imaps_leader = ','
 let g:vimtex_complete_enabled=1
@@ -34,6 +34,11 @@ call vimtex#imaps#add_map({
 			\ 'wrapper':'vimtex#imaps#wrap_math'
 			\})
 
+call vimtex#imaps#add_map({
+			\ 'lhs':'vp',
+			\ 'rhs':'\varpi',
+			\ 'wrapper':'vimtex#imaps#wrap_math'
+			\})
 
 
 
