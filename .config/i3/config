@@ -178,6 +178,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+	mode hide
+	hidden_state hide
 	font pango:DejaVu Sans Mono 10
 }
 
@@ -204,20 +206,13 @@ bindsym XF86MonBrightnessDown exec xbacklight -10 # decrease screen brightness
 #bindsym XF86KbdBrightnessUp exec xbacklight +10
 #bindsym XF86KbdBrightnessDown exec xbacklight -10
 
-# Launch these on startup
-#exec --no-startup-id i3-msg 'workspace 2; exec alacritty -e spotifyd; spt'
-#exec --no-startup-id alacritty -e spt
-
 ## background
-exec --no-startup-id feh --bg-fill ~/Pictures/green_shapes.jpg
+#exec --no-startup-id feh --bg-max --geometry -1000+0 ~/Pictures/ykwtm2.jpg
+exec --no-startup-id feh --bg-max ~/Pictures/ykwtm2.jpg
 
-#exec --no-startup-id alacritty -e "/home/andrew/Downloads/spotifyd/target/release/spotifyd; spt"
-exec_always --no-startup-id /home/andrew/Downloads/spotifyd/target/release/spotifyd
-exec_always --no-startup-id alacritty -e "spt"
+# Execute on startup
 exec --no-startup-id blueman-assistant
 exec --no-startup-id fluxgui
-
-
 
 # compton settings: make terminals opaque
 exec --no-startup-id compton
