@@ -19,6 +19,9 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-fugitive'
 Plug 'lervag/vimtex'
 Plug 'SirVer/UltiSnips' | Plug 'honza/vim-snippets'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'stefandtw/quickfix-reflector.vim' 
 
 call plug#end()
 
@@ -87,3 +90,11 @@ noremap <Leader>P "+p
 
 "Omni complete
 set omnifunc=syntaxcomplete#Complete
+
+
+" ripgrep settings
+"let g:rg_highlight=1
+"let g:rg_binary='/usr/bin/rg'
+
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
+set grepprg=rg\ --vimgrep
