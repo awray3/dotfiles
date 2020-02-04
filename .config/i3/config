@@ -211,7 +211,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -10 # decrease screen brightness
 exec --no-startup-id feh --bg-max ~/Pictures/ykwtm2.jpg
 
 # Execute on startup
-exec --no-startup-id blueman-assistant
+#exec --no-startup-id blueman-assistant
 exec --no-startup-id fluxgui
 
 # compton settings: make terminals opaque
@@ -220,3 +220,9 @@ exec --no-startup-id compton
 # refresh status bar if it fails
 set $refresh_i3status killall -SIGUSR1 i3status
 
+# print screen and recording
+bindsym $mod+Ctrl+C exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 ~/Pictures/Screenshot-$(date -Iseconds | cut -d'+' -f1).png"
+bindsym $mod+Ctrl+P exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 | xclip -selection clipboard -t image/png"
+#bindsym Shift+Print exec ~/.files/i3/record-screen.sh byzanz
+#bindsym Shift+Ctrl+Print exec ~/.files/i3/record-screen.sh gif
+#bindsym Shift+Mod4+Print exec ~/.files/i3/record-screen.sh ogv

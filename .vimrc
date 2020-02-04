@@ -22,6 +22,7 @@ Plug 'SirVer/UltiSnips' | Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'stefandtw/quickfix-reflector.vim' 
+Plug 'tpope/vim-obsession' 
 
 call plug#end()
 
@@ -39,7 +40,7 @@ set textwidth=80
 set colorcolumn=80
 set shiftround " seems to round your indents
 set foldmethod=indent
-set foldlevel=99
+set foldlevel=999
 set linebreak " Adds in a better word wrap
 set ruler 
 "set number
@@ -98,3 +99,7 @@ set omnifunc=syntaxcomplete#Complete
 
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 set grepprg=rg\ --vimgrep
+
+
+" Tex Flavor
+let g:tex_flavor='latex'
