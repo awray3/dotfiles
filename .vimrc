@@ -23,6 +23,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'stefandtw/quickfix-reflector.vim' 
 Plug 'tpope/vim-obsession' 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -103,3 +104,7 @@ set grepprg=rg\ --vimgrep
 
 " Tex Flavor
 let g:tex_flavor='latex'
+
+
+" buffer open and change
+nnoremap gb :buffers<CR>:buffer<Space>
