@@ -21,16 +21,9 @@ alias gau "git add -u"
 
 # system-specific aliases. Remember Darwin = old name for MacOS
 
-switch (uname)
-
-case Darwin
-	alias thesis "cd ~/Documents/thesis.nosync"
-	alias biostats "cd ~/Documents/data_sci.nosync/biostats"
-case Linux
-	alias thesis "cd ~/Documents/thesis"
-	alias biostats "cd ~/Documents/biostats"
-	alias i3config "vim ~/.config/i3/config"
-end
+alias thesis "cd ~/Documents/thesis"
+alias biostats "cd ~/Documents/bio"
+alias i3config "vim ~/.config/i3/config"
 
 # YADM aliases 
 alias yau "yadm add -u"
