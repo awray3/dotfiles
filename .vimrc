@@ -7,7 +7,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'ayu-theme/ayu-vim'
@@ -24,6 +23,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'stefandtw/quickfix-reflector.vim' 
 Plug 'tpope/vim-obsession' 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jalvesaq/Nvim-R'
+Plug 'aperezdc/vim-template'
 
 call plug#end()
 
@@ -108,3 +109,11 @@ let g:tex_flavor='latex'
 
 " buffer open and change
 nnoremap gb :buffers<CR>:buffer<Space>
+
+" neovim only settings
+if has('nvim')
+	let g:vimtex_compiler_progname="/home/andrew/.local/bin/nvr"
+endif
+
+" template settings
+let g:templates_directory = "/home/andrew/.vim/templates"
