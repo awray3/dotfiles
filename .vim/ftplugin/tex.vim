@@ -10,7 +10,7 @@ let g:vimtex_imaps_disabled=['j', 'k', '0', '1', '2', '\', 'jk']
 let g:vimtex_quickfix_open_on_warning = 0
 let g:vimtex_imaps_leader = ','
 let g:vimtex_complete_enabled=1
-let g:vimtex_view_automatic=0
+let g:vimtex_view_automatic=1
 let g:vimtex_parser_bib_backend = 'vim'
 let g:vimtex_view_method='zathura'
 
