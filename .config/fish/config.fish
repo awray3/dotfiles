@@ -1,23 +1,17 @@
 # this might need to be changed on ubuntu.
 # set -gx PATH $HOME/.gem/ruby/2.6.0/bin $PATH
- set -gx PATH /home/andrew/.cargo/bin $PATH
- set -gx PATH /home/andrew/Downloads/spotifyd/target/release $PATH
-
-
 
 # server alias for vim
 alias vim "nvim"
 
 alias vimconfig "vim ~/.vimrc"
 alias fishconfig "vim ~/.config/fish/config.fish"
-#alias spotconfig "vim ~/.config/spotifyd/spotifyd.conf"
-#alias visconfig "vim ~/.config/vis/config"
-#alias i3statusconfig "vim ~/.config/i3status/config"
 alias texconfig "vim ~/.vim/ftplugin/tex.vim"
+alias rconfig "vim ~/.vim/ftplugin/r.vim"
+alias fixkeys "xmodmap ~/.Xmodmap"
 
 alias la 'ls -la | grep "^d"; and ls -la | grep "^-"; and ls -la | grep "^l"'
 alias gau "git add -u"
-#alias tmux=""
 
 # system-specific aliases. Remember Darwin = old name for MacOS
 
