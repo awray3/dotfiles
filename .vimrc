@@ -37,10 +37,10 @@ colorscheme rigel
 "let ayucolor="mirage" " for mirage version of theme
 "colorscheme ayu
 
-
+" general vim settings
+set spell spelllang=en_us
 set textwidth=80
 set colorcolumn=80
-set shiftround " seems to round your indents
 set foldmethod=indent
 set foldlevel=999
 set linebreak " Adds in a better word wrap
@@ -74,7 +74,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit='vertical'
 let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
-let g:UltiSnipsSnippetsDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+let g:UltiSnipsSnippetsDirectories=[$HOME.'/.vim/UltiSnips']
 
 
 " swap and temp files
@@ -117,3 +117,5 @@ endif
 
 " template settings
 let g:templates_directory = "/home/andrew/.vim/templates"
+
+
