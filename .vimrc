@@ -117,5 +117,3 @@ endif
 
 " template settings
 let g:templates_directory = "/home/andrew/.vim/templates"
-
-
