@@ -32,7 +32,9 @@ filetype plugin indent on
 
 set termguicolors
 syntax enable
-colorscheme rigel
+set background=light
+colorscheme oceanlight
+"colorscheme rigel
 
 "let ayucolor="mirage" " for mirage version of theme
 "colorscheme ayu
@@ -108,7 +110,7 @@ let g:tex_flavor='latex'
 
 
 " buffer open and change
-nnoremap gb :buffers<CR>:buffer<Space>
+nnoremap gb :Buffer<CR>
 
 " neovim only settings
 if has('nvim')
@@ -117,3 +119,21 @@ endif
 
 " template settings
 let g:templates_directory = "/home/andrew/.vim/templates"
+
+" fzf under current word
+nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
+
+" Splits now go below and right instead 
+set splitbelow splitright
+
+" navigate splits easier
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+
+" easier resizing
+noremap <silent> <C-Left> :vertical resize +3<CR>
+noremap <silent> <C-Right> :vertical resize -3<CR>
+noremap <silent> <C-Up> :resize +3<CR>
+noremap <silent> <C-Down> :resize -3<CR>
