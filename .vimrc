@@ -123,6 +123,9 @@ let g:templates_directory = "/home/andrew/.vim/templates"
 " fzf under current word
 nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
 
+" fzf command
+nnoremap gf :Find<CR>
+
 " Splits now go below and right instead 
 set splitbelow splitright
 
