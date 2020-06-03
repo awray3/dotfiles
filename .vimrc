@@ -47,8 +47,8 @@ set foldmethod=indent
 set foldlevel=999
 set linebreak " Adds in a better word wrap
 set ruler 
-"set number
-set relativenumber
+set number
+"set relativenumber
 set backspace=indent,eol,start "allow backspacing over everything in insert mode
 set incsearch "Turn on Highlight next search
 

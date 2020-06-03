@@ -25,7 +25,7 @@ alias yc "yadm commit -v"
 alias yst "yadm status"
 
 # Conda settings for fish
-#eval /home/andrew/miniconda/bin/conda "shell.fish" "hook" $argv | source
+eval /home/andrew/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 
 # fzf
 set FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
