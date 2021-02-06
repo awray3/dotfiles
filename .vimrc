@@ -10,31 +10,32 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'ayu-theme/ayu-vim'
-Plug 'Rigellute/rigel'
+"Plug 'Rigellute/rigel'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-fugitive'
-Plug 'lervag/vimtex'
-Plug 'SirVer/UltiSnips' | Plug 'honza/vim-snippets'
+"Plug 'lervag/vimtex'
+"Plug 'SirVer/UltiSnips' | Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'stefandtw/quickfix-reflector.vim' 
 Plug 'tpope/vim-obsession' 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jalvesaq/Nvim-R'
-Plug 'aperezdc/vim-template'
+"Plug 'jalvesaq/Nvim-R'
+"Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
 filetype plugin indent on
 
 set termguicolors
+"let ayucolor="light"  " for light version of theme
+let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+colorscheme ayu 
 syntax enable
-set background=light
-colorscheme oceanlight
-"colorscheme rigel
 
 "let ayucolor="mirage" " for mirage version of theme
 "colorscheme ayu
@@ -65,18 +66,15 @@ nnoremap <space> za
 " remap esc
 inoremap jk <esc>
 
-" Allow project specific vimrc
-set exrc
-set secure
 
 "" Ultisnips settings
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsEditSplit='vertical'
-let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
-let g:UltiSnipsSnippetsDirectories=[$HOME.'/.vim/UltiSnips']
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsEditSplit='vertical'
+"let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
+"let g:UltiSnipsSnippetsDirectories=[$HOME.'/.vim/UltiSnips']
 
 
 " swap and temp files
@@ -106,7 +104,7 @@ set grepprg=rg\ --vimgrep
 
 
 " Tex Flavor
-let g:tex_flavor='latex'
+"let g:tex_flavor='latex'
 
 
 " buffer open and change
@@ -136,7 +134,29 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 
 " easier resizing
-noremap <silent> <C-Left> :vertical resize +3<CR>
-noremap <silent> <C-Right> :vertical resize -3<CR>
-noremap <silent> <C-Up> :resize +3<CR>
-noremap <silent> <C-Down> :resize -3<CR>
+noremap <silent> <Leader><Left> :vertical resize +3<CR>
+noremap <silent> <Leader><Right> :vertical resize -3<CR>
+noremap <silent> <Leader><Up> :resize +3<CR>
+noremap <silent> <Leader><Down> :resize -3<CR>
+
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/Documents/vimwiki_html', 'auto_export': 1}]
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" input current date
+:nnoremap <F5> "=strftime("%b %d, %Y")<CR>P
