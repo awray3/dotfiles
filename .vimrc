@@ -9,22 +9,18 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'ayu-theme/ayu-vim'
-"Plug 'Rigellute/rigel'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-fugitive'
-"Plug 'lervag/vimtex'
-"Plug 'SirVer/UltiSnips' | Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'stefandtw/quickfix-reflector.vim' 
 Plug 'tpope/vim-obsession' 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'jalvesaq/Nvim-R'
-"Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -32,13 +28,11 @@ filetype plugin indent on
 
 set termguicolors
 "let ayucolor="light"  " for light version of theme
-let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"   " for dark version of theme
-colorscheme ayu 
-syntax enable
-
 "let ayucolor="mirage" " for mirage version of theme
-"colorscheme ayu
+"let ayucolor="dark"   " for dark version of theme
+"colorscheme ayu 
+colorscheme dracula
+syntax enable
 
 " general vim settings
 set spell spelllang=en_us
@@ -112,7 +106,8 @@ nnoremap gb :Buffer<CR>
 
 " neovim only settings
 if has('nvim')
-	let g:vimtex_compiler_progname="/home/andrew/.local/bin/nvr"
+	"let g:vimtex_compiler_progname="/Users/andrewwrayj"
+	let g:python3_host_prog="/usr/local/Caskroom/miniconda/base/envs/neovim/bin/python3"
 endif
 
 " template settings

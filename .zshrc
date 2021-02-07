@@ -1,24 +1,138 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/andrewwray/.oh-my-zsh"
 
-# add llvm to path
-export PATH=$PATH:/usr/local/opt/llvm/bin/
+# antigen setup (Plugins)
+source ~/.config/antigen.zsh
+
+antigen use oh-my-zsh
+antigen bundle git
+antigen bundle svn
+antigen bundle aws
+antigen bundle brew
+antigen bundle pip
+antigen bundle command-not-found
+antigen bundle copydir
+antigen bundle copyfile
+antigen bundle fzf
+antigen bundle themes
+antigen bundle esc/conda-zsh-completion
+antigen bundle desyncr/auto-ls
+antigen bundle Tarrasch/zsh-functional
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+#antigen theme alanpeabody
+antigen theme jackharrisonsherlock/common
+
+antigen apply
+
+# aliases
+alias vim="nvim"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias vimconfig="vim ~/.vimrc"
+
+# yadm
+alias yst="yadm status"
+alias yc="yadm commit"
+alias ya="yadm add"
+
+plugins=(git aws brew)
+
+source $ZSH/oh-my-zsh.sh
 
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="af-magic"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -37,7 +151,7 @@ ZSH_THEME="af-magic"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -49,6 +163,8 @@ ZSH_THEME="af-magic"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -67,14 +183,12 @@ ZSH_THEME="af-magic"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -99,63 +213,19 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim="nvim"
-
-alias vimconfig="vim ~/.vimrc"
-alias nvimconfig="vim ~/.config/nvim/init.vim"
-alias zshconfig="vim ~/.zshrc"
-alias texconfig="vim ~/.vim/ftplugin/tex.vim"
-alias rconfig="vim ~/.vim/ftplugin/r.vim"
-
-alias la='ls -la | grep "^d"; and ls -la | grep "^-"; and ls -la | grep "^l"'
-#alias gau="git add -u"
-
-# system-specific aliases. Remember Darwin = old name for MacOS
-
-# YADM aliases 
-alias yau="yadm add -u"
-alias yc="yadm commit -v"
-alias yst="yadm status"
-
-# jupyter aliases
-alias jn="jupyter notebook"
-alias jl="conda activate ju; jupyter lab"
-
-# go to projects
-alias pr="cd ~/Documents/projects.nosync/"
-
-# go to job stuff
-alias job="cd ~/Documents/job_app_materials"
-
-# hadoop
-alias hstart="/usr/local/Cellar/hadoop/3.3.0/sbin/start-all.sh"
-alias hstop="/usr/local/Cellar/hadoop/3.3.0/sbin/stop-all.sh"
-
-export JAVA_HOME=$(/usr/libexec/java_home -v15)
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/andrewwray/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/andrewwray/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/andrewwray/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/andrewwray/anaconda3/bin:$PATH"
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/andrewwray/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/andrewwray/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/andrewwray/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/andrewwray/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
