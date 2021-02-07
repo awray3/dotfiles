@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/andrewwray/.oh-my-zsh"
+export ZSH="/Users/andrewwray/.config/oh-my-zsh"
 
 # antigen setup (Plugins)
 source ~/.config/antigen.zsh
@@ -28,16 +28,17 @@ antigen apply
 
 # aliases
 alias vim="nvim"
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias vimconfig="vim ~/.vimrc"
+alias zshconf="vim ~/.zshrc"
+alias omzconf="vim ~/.oh-my-zsh"
+alias vimconf="vim ~/.vimrc"
 
 # yadm
 alias yst="yadm status"
 alias yc="yadm commit"
 alias ya="yadm add"
+alias yau="yadm add -u"
 
-plugins=(git aws brew)
+plugins=(git aws brew vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
