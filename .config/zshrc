@@ -38,6 +38,13 @@ alias yc="yadm commit"
 alias ya="yadm add"
 alias yau="yadm add -u"
 
+
+# jupyter
+
+alias jl="conda activate julab && jupyter lab"
+
+
+# plugins 
 plugins=(git aws brew vi-mode)
 
 source $ZSH/oh-my-zsh.sh
