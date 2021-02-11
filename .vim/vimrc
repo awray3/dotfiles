@@ -1,3 +1,6 @@
+""""""""""
+" vimrc ~
+""""""""""
 " Installs vim plug if it is not already installed.
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -21,6 +24,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'stefandtw/quickfix-reflector.vim' 
 Plug 'tpope/vim-obsession' 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'voldikss/vim-floaterm'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 

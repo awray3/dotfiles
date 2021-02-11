@@ -1,3 +1,6 @@
+############
+# zshrc 
+############
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/andrewwray/.config/oh-my-zsh"
 
@@ -6,6 +9,7 @@ source ~/.config/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundle git
+antigen bundle tmux
 antigen bundle svn
 antigen bundle aws
 antigen bundle brew
@@ -22,15 +26,18 @@ antigen bundle Tarrasch/zsh-functional
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 #antigen theme alanpeabody
-antigen theme jackharrisonsherlock/common
+#antigen theme jackharrisonsherlock/common
+antigen theme af-magic
 
 antigen apply
 
 # aliases
+alias reloadzsh="source ~/.config/zshrc"
 alias vim="nvim"
-alias zshconf="vim ~/.zshrc"
-alias omzconf="vim ~/.oh-my-zsh"
-alias vimconf="vim ~/.vimrc"
+alias zshconf="vim ~/.config/zshrc"
+alias vimconf="vim ~/.vim/vimrc"
+alias nvimconf="vim ~/.config/nvim/init.vim"
+alias tmuxconf="vim ~/.tmux.conf"
 
 # yadm
 alias yst="yadm status"
@@ -39,17 +46,27 @@ alias ya="yadm add"
 alias yau="yadm add -u"
 
 
-# jupyter
-
+# jupyter 
 alias jl="conda activate julab && jupyter lab"
 
+# aws 
+alias awsconf="vim ~/.aws/" 
+alias awsprof="~/Documents/setup/which_aws.sh"
 
 # plugins 
 plugins=(git aws brew vi-mode)
 
+
+# pythonpath
+export PYTHONPATH='/Users/andrewwray/Documents/DataScience/experimental/util/trunk/:/Users/andrewwray/Documents/DataScience/pipelines/trunk'
+
+
+#/Users/andrewwray/Documents/setup/aws_on_startup.sh
+
 source $ZSH/oh-my-zsh.sh
 
 
+ls 
 
 
 
