@@ -1,0 +1,20 @@
+antigen use oh-my-zsh
+antigen bundle git
+antigen bundle tmux
+antigen bundle svn
+antigen bundle aws
+antigen bundle brew
+antigen bundle pip
+antigen bundle command-not-found
+antigen bundle copydir
+antigen bundle copyfile
+antigen bundle fzf
+antigen bundle themes
+antigen bundle esc/conda-zsh-completion
+antigen bundle desyncr/auto-ls
+antigen bundle Tarrasch/zsh-functional 
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen theme af-magic
+
+antigen apply

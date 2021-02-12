@@ -6,36 +6,13 @@ export ZSH="/Users/andrewwray/.config/oh-my-zsh"
 
 # antigen setup (Plugins)
 source ~/.config/antigen.zsh
-
-antigen use oh-my-zsh
-antigen bundle git
-antigen bundle tmux
-antigen bundle svn
-antigen bundle aws
-antigen bundle brew
-antigen bundle pip
-antigen bundle command-not-found
-antigen bundle copydir
-antigen bundle copyfile
-antigen bundle fzf
-antigen bundle themes
-antigen bundle esc/conda-zsh-completion
-antigen bundle desyncr/auto-ls
-antigen bundle Tarrasch/zsh-functional
-
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-#antigen theme alanpeabody
-#antigen theme jackharrisonsherlock/common
-antigen theme af-magic
-
-antigen apply
+antigen init ~/.config/antigenrc
 
 # aliases
-alias reloadzsh="source ~/.config/zshrc"
+alias reloadzsh="source ~/.config/zshrc && clear && ls"
 alias vim="nvim"
 alias zshconf="vim ~/.config/zshrc"
-alias vimconf="vim ~/.vim/vimrc"
+alias vimconf="vim -S ~/.vim/vimconf.vim"
 alias nvimconf="vim ~/.config/nvim/init.vim"
 alias tmuxconf="vim ~/.tmux.conf"
 
@@ -44,7 +21,11 @@ alias yst="yadm status"
 alias yc="yadm commit"
 alias ya="yadm add"
 alias yau="yadm add -u"
+alias yp="yadm push"
 
+# tmux
+alias tma="tmux attach -t"
+alias tls="tmux ls"
 
 # jupyter 
 alias jl="conda activate julab && jupyter lab"
@@ -57,6 +38,7 @@ alias awsprof="~/Documents/setup/which_aws.sh"
 plugins=(git aws brew vi-mode)
 
 
+
 # pythonpath
 export PYTHONPATH='/Users/andrewwray/Documents/DataScience/experimental/util/trunk/:/Users/andrewwray/Documents/DataScience/pipelines/trunk'
 
@@ -66,7 +48,7 @@ export PYTHONPATH='/Users/andrewwray/Documents/DataScience/experimental/util/tru
 source $ZSH/oh-my-zsh.sh
 
 
-ls 
+#ls 
 
 
 
