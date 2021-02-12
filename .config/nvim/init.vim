@@ -3,8 +3,4 @@ let &packpath = &runtimepath
 source ~/.vim/vimrc
 
 
-"lua require'fterm'.config({
-    "\ position="top",
-    "\ width=100,
-    "\ height=20,
-    "\ commands=true})
+let g:python3_host_prog="/usr/local/Caskroom/miniconda/base/envs/neovim/bin/python3"
