@@ -26,6 +26,7 @@ alias yp="yadm push"
 # tmux
 alias tma="tmux attach -t"
 alias tls="tmux ls"
+alias tn="tmux new -s"
 
 # jupyter 
 alias jl="conda activate julab && jupyter lab"
