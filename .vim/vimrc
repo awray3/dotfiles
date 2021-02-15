@@ -1,0 +1,11 @@
+""""""""""
+" vimrc ~
+"""""""""" 
+
+source ~/.vim/vimrc_files/plugs.vim
+source ~/.vim/vimrc_files/colors.vim
+source ~/.vim/vimrc_files/general.vim
+source ~/.vim/vimrc_files/ultisnip.vim
+source ~/.vim/vimrc_files/swp_temp.vim
+source ~/.vim/vimrc_files/fzfconf.vim
+source ~/.vim/vimrc_files/coc_conf.vim 
