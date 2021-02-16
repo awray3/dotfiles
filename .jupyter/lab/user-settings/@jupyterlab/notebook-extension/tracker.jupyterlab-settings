@@ -9,7 +9,7 @@
     "codeCellConfig": {
         "autoClosingBrackets": true,
         "fontFamily": null,
-        "fontSize": null,
+        "fontSize": 16,
         "lineHeight": null,
         "lineNumbers": true,
         "lineWrap": "off",
@@ -36,7 +36,7 @@
     "markdownCellConfig": {
         "autoClosingBrackets": false,
         "fontFamily": null,
-        "fontSize": null,
+        "fontSize": 14,
         "lineHeight": null,
         "lineNumbers": true,
         "lineWrap": "on",
@@ -55,7 +55,7 @@
     "rawCellConfig": {
         "autoClosingBrackets": false,
         "fontFamily": null,
-        "fontSize": null,
+        "fontSize": 14,
         "lineHeight": null,
         "lineNumbers": false,
         "lineWrap": "on",
