@@ -7,14 +7,14 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +2 ~/.vim/vimrc
+badd +5 ~/.vim/vimrc
 badd +1 ~/.vim/vimrc_files/coc_conf.vim
 badd +1 ~/.vim/vimrc_files/colors.vim
 badd +1 ~/.vim/vimrc_files/fzfconf.vim
 badd +1 ~/.vim/vimrc_files/general.vim
 badd +1 ~/.vim/vimrc_files/swp_temp.vim
 badd +1 ~/.vim/vimrc_files/ultisnip.vim
-badd +1 ~/.vim/vimrc_files/plugs.vim
+badd +6 ~/.vim/vimrc_files/plugs.vim
 argglobal
 %argdel
 $argadd ~/.vim/vimrc
@@ -34,11 +34,11 @@ setlocal fdl=999
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 2 - ((1 * winheight(0) + 16) / 33)
+let s:l = 4 - ((3 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-2
+4
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
