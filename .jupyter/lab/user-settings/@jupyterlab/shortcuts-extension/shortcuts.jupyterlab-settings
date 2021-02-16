@@ -2,9 +2,16 @@
         {
             "command": "runmenu:restart-and-run-all",
             "keys": [
-                "Ctrl Shift R"
+                "Cmd Shift R"
             ],
             "selector": "[data-jp-code-runner]"
+        },
+    {
+            "command": "jupyterlab_code_formatter:format_all",
+            "keys": [
+                "Cmd Shift F",
+            ],
+            "selector": ".jp-Notebook.jp-mod-editMode"
         }
     ]
 }
