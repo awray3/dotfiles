@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Dracula Soft",
+    "vim.enableNeovim": true,
+    "terminal.integrated.inheritEnv": false,
+    "python.languageServer": "Pylance",
+    "vim.vimrc.enable": true,
+    "keyboard.touchbar.enabled": false,
+    "editor.fontSize": 14,
+    "window.zoomLevel": 1,
+    "vim.useSystemClipboard": true,
+    "vim.vimrc.path": "/Users/andrewwray/.vim/vimrc_files/general.vim"
+}
