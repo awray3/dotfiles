@@ -36,7 +36,7 @@
     "markdownCellConfig": {
         "autoClosingBrackets": false,
         "fontFamily": null,
-        "fontSize": 14,
+        "fontSize": 18,
         "lineHeight": null,
         "lineNumbers": true,
         "lineWrap": "on",
@@ -55,7 +55,7 @@
     "rawCellConfig": {
         "autoClosingBrackets": false,
         "fontFamily": null,
-        "fontSize": 14,
+        "fontSize": 16,
         "lineHeight": null,
         "lineNumbers": false,
         "lineWrap": "on",
