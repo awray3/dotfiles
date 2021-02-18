@@ -35,6 +35,9 @@ alias jl="conda activate julab && jupyter lab"
 alias awsconf="vim ~/.aws/" 
 alias awsprof="~/Documents/setup/which_aws.sh"
 
+# startup script (starts tmux and a jupyter lab kernel)
+alias jlstart="~/Documents/setup/startup.sh"
+
 # plugins 
 plugins=(git aws brew vi-mode)
 
