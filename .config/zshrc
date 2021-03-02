@@ -12,7 +12,7 @@ antigen init ~/.config/antigenrc
 
 # aliases
 alias reloadzsh="source ~/.config/zshrc && clear && ls"
-alias vim="nvim"
+#alias vim="nvim"
 alias zshconf="vim ~/.config/zshrc"
 alias vimconf="vim -S ~/.vim/vimconf.vim"
 alias nvimconf="vim ~/.config/nvim/init.vim"
@@ -36,30 +36,13 @@ alias jl="conda activate julab && jupyter lab"
 alias jlstart="/Users/andrewwray/Documents/setup/startup.sh"
 
 # aws 
-alias awsconf="vim ~/.aws/" 
-alias awsprof="~/Documents/setup/which_aws.sh"
-alias start_ec2="~/Documents/setup/start_ec2.sh"
+#alias awsconf="vim ~/.aws/" 
+#alias awsprof="~/Documents/setup/which_aws.sh"
+#alias start_ec2="~/Documents/setup/start_ec2.sh"
 
 
 # plugins 
-plugins=(git aws brew vi-mode)
+plugins=(git aws vi-mode)
 
 # pythonpath
-export PYTHONPATH='/Users/andrewwray/Documents/myDataScience/experimental/util/trunk/:/Users/andrewwray/Documents/DataScienceLocal/pipelines/trunk:/Users/andrewwray/Documents/DataScienceLocal/nn/trunk/'
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+export PYTHONPATH='~/DataScience/experimental/util/trunk/:~/Documents/DataScience/pipelines/trunk:~/Documents/DataScience/nn/trunk/'
