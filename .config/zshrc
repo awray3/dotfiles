@@ -2,11 +2,13 @@
 # zshrc 
 ############
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/andrewwray/.oh-my-zsh"
+export ZSH="/Users/andrewwray/.config/oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
 
 # antigen setup (Plugins)
 source ~/.config/antigen.zsh
 antigen init ~/.config/antigenrc
+
 
 # aliases
 alias reloadzsh="source ~/.config/zshrc && clear && ls"
@@ -15,6 +17,7 @@ alias zshconf="vim ~/.config/zshrc"
 alias vimconf="vim -S ~/.vim/vimconf.vim"
 alias nvimconf="vim ~/.config/nvim/init.vim"
 alias tmuxconf="vim ~/.tmux.conf"
+alias sshconf="vim ~/.ssh/config"
 
 # yadm
 alias yst="yadm status"
@@ -29,22 +32,21 @@ alias tls="tmux ls"
 alias tn="tmux new -s"
 
 # jupyter 
-alias jl="conda activate julab && jupyter lab"
+alias jl="conda activate julab && jupyter lab" 
+alias jlstart="/Users/andrewwray/Documents/setup/startup.sh"
 
 # aws 
 alias awsconf="vim ~/.aws/" 
 alias awsprof="~/Documents/setup/which_aws.sh"
+alias start_ec2="~/Documents/setup/start_ec2.sh"
 
-# startup script (starts tmux and a jupyter lab kernel)
-alias jlstart="~/Documents/setup/startup.sh"
 
 # plugins 
 plugins=(git aws brew vi-mode)
 
 # pythonpath
-export PYTHONPATH='/Users/andrewwray/Documents/DataScience/experimental/util/trunk/:/Users/andrewwray/Documents/DataScience/pipelines/trunk'
+export PYTHONPATH='/Users/andrewwray/Documents/myDataScience/experimental/util/trunk/:/Users/andrewwray/Documents/DataScienceLocal/pipelines/trunk:/Users/andrewwray/Documents/DataScienceLocal/nn/trunk/'
 
-source $ZSH/oh-my-zsh.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
