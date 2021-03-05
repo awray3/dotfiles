@@ -2,7 +2,7 @@
 # zshrc 
 ############
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/andrewwray/.config/oh-my-zsh"
+export ZSH="/home/awray/.config/oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # antigen setup (Plugins)
@@ -40,9 +40,11 @@ alias jlstart="/Users/andrewwray/Documents/setup/startup.sh"
 #alias awsprof="~/Documents/setup/which_aws.sh"
 #alias start_ec2="~/Documents/setup/start_ec2.sh"
 
+#shutdown
+alias turn_off="sudo shutdown -h now"
 
 # plugins 
 plugins=(git aws vi-mode)
 
 # pythonpath
-export PYTHONPATH='~/DataScience/experimental/util/trunk/:~/Documents/DataScience/pipelines/trunk:~/Documents/DataScience/nn/trunk/'
+export PYTHONPATH='$PYTHONPATH:/home/awray/DataScience/experimental/util/trunk/:/home/awray/DataScience/pipelines/trunk:/home/awray/DataScience/nn/trunk/'
